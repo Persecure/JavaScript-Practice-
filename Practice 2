@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Practice 2</title>
+</head>
+<style>
+    body {
+            background-color: rgb(212, 180, 241);
+        }
+       
+     p {
+            font-size: 3em;
+            margin: 20px;
+     }
+
+     input {
+        font-size: 3em;
+            margin: 20px;
+     }
+     button {
+            font-size: 20px;
+            font-weight: bold;
+            padding: 10px;
+            border: 4px solid #000;
+        }
+
+        button:hover {
+            background-color: beige;
+        }
+
+        button:active {
+            background-color: blue;
+            color: #FFF;
+        }
+</style>
+<body>
+    <p>Loan Amount</p>
+    <input type="text" id="myInput"><br>
+    <p>Loan duration in years</p>
+    <input type="text" id="loanYears"><br>
+    <p>Interest rate %</p>
+    <input type="text" id="loanInterest"><br>
+    <button type="button" onclick="getInputValue()";>Get value</button>
+    <p id="printhere"></p>
+    
+    <script>
+        function getInputValue() {
+            var inputVal = document.getElementById("myInput").value;
+            var inputYears = document.getElementById("loanYears").value;
+            var inputInterest = document.getElementById("loanInterest").value;
+
+            var doubletoo = (inputVal * inputYears * inputInterest) / 100;
+            document.getElementById("printhere").innerHTML = "The interest paid on this loan is " + doubletoo;
+        }
+    
+            
+    </script>
+</body>
+</html>
